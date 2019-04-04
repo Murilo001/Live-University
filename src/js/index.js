@@ -1,6 +1,5 @@
-var instance = M.Collapsible.getInstance(document.querySelectorAll('#abrir-check'));
-alert(instance);
-instance.open(0);
+//var instance = M.Collapsible.getInstance(document.querySelectorAll('#abrir-check'));
+//instance.open(0);
 
 
 
