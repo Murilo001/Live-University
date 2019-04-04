@@ -1,6 +1,8 @@
 //var instance = M.Collapsible.getInstance(document.querySelectorAll('#abrir-check'));
 //instance.open(0);
-
+$(document).ready(function(){
+  $("#hidden").hide();
+});
 
 
 
@@ -20,7 +22,7 @@ function myFunction() {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
-      } else {
+      } else {	
         tr[i].style.display = "none";
       }
     } 
