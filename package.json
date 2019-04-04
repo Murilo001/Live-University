@@ -1,0 +1,23 @@
+{
+  "name": "live-university",
+  "version": "1.0.0",
+  "description": "Projeto de teste de habilidade.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+	"start": "npx pm2 start server.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murilo001/Live-University.git"
+  },
+  "author": "Murilo Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Murilo001/Live-University/issues"
+  },
+  "homepage": "https://github.com/Murilo001/Live-University#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
