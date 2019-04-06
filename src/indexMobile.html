@@ -1,128 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
 	<title>Live University - Cadastro Colaboradores</title>
 
 	<!-- CSS  -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
 	<style type="text/css">
+		body {
+			overflow-x: hidden;
+		}
+		
+		#icon-colaborador {
+			color: #CB9A38;
+		}
+
+		#icon-curso {
+			color: #CB9A38;
+		}
+
+		
+		.label-menu:hover {
+			border-left: 5px solid #54B4BB;
+		}
 
 
-	body {
-  		overflow-x: hidden;
-	}
+		.label-menu:hover .icon-menu {
+			color: #54B4BB;
+		}
 
-	#nav-mobile {
-		width: 220px;
-	}
+		#nav-mobile {
+			width: 220px;
+		}
 
 
-	#white-card {
- 		border-radius: 8px;
-
-	}
-
-	
-	#card-check-list {
-		border-left: 5px solid #CB9A38; ;
-  
-	}
-
-	@media only screen and (min-width: 600px) {
 		#white-card {
-			margin-left: 30px; 
-			margin-right:  30px;
-		}
-	}
-
-	@media only screen and (max-width: 600px) {
-
-		#card-marign {
-			margin-left: 220px;
-		}
-	}
-
-	
-	@media only screen and (min-width: 600px) {
-		.wrapper {
-			padding-left: 217px;
+			border-radius: 8px;
 		}
 
-	}
 
-	
+		#card-check-list {
+			border-left: 5px solid #CB9A38;
+		}
 
-	.btn-width-fixed {
-		width: 100px;
-	}
+		@media only screen and (min-width: 600px) {
+			#white-card {
+				margin-left: 30px;
+				margin-right: 30px;
+			}
+		}
 
-	.colored-orange {
-		color: #CB9A38;
-	}
+		@media only screen and (max-width: 600px) {
 
-	.colored-blue {
-		color: #54B4BB;
-	}
+			#card-marign {
+				margin-left: 220px;
+			}
+		}
 
-	#slide-out {
-		width: 17%;
-	}
+		@media only screen and (min-width: 600px) {
+			.wrapper {
+				padding-left: 217px;
+			}
 
-	.ratio {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 50%;
-		padding-bottom: 100%;
-		position: relative;
-		width: 100%;
-	}
+		}
 
-	.img-circle {
-		border-radius: 50%;
-	}
+		.btn-width-fixed {
+			width: 100px;
+		}
 
-	/* Cor do checkbox ativado*/
-	[type="checkbox"].filled-in:checked + span:not(.lever):after {
-		color: #CB9A38 !important;
-	}
+		.colored-orange {
+			color: #CB9A38;
+		}
+
+		.colored-blue {
+			color: #54B4BB;
+		}
+
+		#slide-out {
+			width: 17%;
+		}
+
+		.ratio {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 50%;
+			padding-bottom: 100%;
+			position: relative;
+			width: 100%;
+		}
+
+		.img-circle {
+			border-radius: 50%;
+		}
+
+		/* Cor do checkbox ativado*/
+		[type="checkbox"].filled-in:checked+span:not(.lever):after {
+			color: #CB9A38 !important;
+		}
 
 
 
-	/* Cor dos ícones no menu*/
-	.sidenav li > a li > a > [class*="mdi-"], .sidenav li > a > i.material-icons {
-		color: #CB9A38;
-	}
-
-
-
-</style>
+		/* Cor dos ícones no menu*/
+		.sidenav li>a li>a>[class*="mdi-"],
+		.sidenav li>a>i.material-icons {
+			color: #CB9A38;
+		}
+	</style>
 
 
 </head>
+
 <body class="grey lighten-4">
 	<header>
-		<div class="container-fluid"><a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle hide-on-large-only"><i class="material-icons">menu</i></a></div>
+		<div class="container-fluid"><a href="#" data-target="nav-mobile"
+				class="top-nav sidenav-trigger waves-effect waves-light circle hide-on-large-only"><i
+					class="material-icons">menu</i></a></div>
 
 
 		<ul id="nav-mobile" class="sidenav sidenav-fixed">
-			<li><div class="user-view">
-				<div class="background">
-					<img src="images/left.png">
+			<li>
+				<div class="user-view">
+					<div class="background">
+						<img src="images/left.png">
+					</div>
+					<br>
+					<br>
+					<a href="#name"><span class="white-text name"></span></a>
+					<a href="#user"><img style="width: 100%" src="images/liveLogoSemFundo.png"></a>
+					<a href="#email"><span class="white-text email"></span></a>
 				</div>
-				<br>
-				<br>
-				<a href="#name"><span class="white-text name"></span></a>
-				<a href="#user"><img style="width: 100%" src="images/livelogo.png"></a>
-				<a href="#email"><span class="white-text email"></span></a>
-			</div></li>
-			<li><a href="#!" ><i class="material-icons colored-orange">people</i>Colaboradores</a></li>
-			<li><a href="#!" class="colored-blue"><i class="material-icons">developer_board</i>Cursos</a></li>
+			</li>
+			<li class="label-menu"><a href="#!"><i class="material-icons icon-menu">people</i>Colaboradores</a></li>
+			<li class="label-menu"><a href="#!"><i class="material-icons icon-menu">developer_board</i>Cursos</a></li>
 
 		</ul>
 		<!-- Sidebar BSA-->
@@ -130,10 +145,10 @@
 
 	</header>
 
-	<main class="wrapper">     
+	<main class="wrapper">
 		<div class="section no-pad-bot" id="index-banner">
 			<div class="container-fluid">
-			
+
 				<div class="container-fluid">
 
 					<!-- User -->
@@ -152,12 +167,16 @@
 
 							<div class="col s12">
 								<br>
-								<a class="waves-effect grey lighten-3 btn-small colored-blue" id="btn-check-list"><i class="material-icons left">playlist_add_check</i>CHECKLIST</a>
+								<a class="waves-effect grey lighten-3 btn-small colored-blue" id="btn-check-list"><i
+										class="material-icons left">playlist_add_check</i>CHECKLIST</a>
 
-								<a class="waves-effect grey lighten-3 btn-small colored-blue"><i class="material-icons left">cloud_download</i>BAIXAR CONTEÚDO</a>
-								<br><br>	<br><br>	
+								<a class="waves-effect grey lighten-3 btn-small colored-blue"><i
+										class="material-icons left">cloud_download</i>BAIXAR CONTEÚDO</a>
+								<br><br> <br><br>
 							</div>
 
+
+							<div class="row">
 							<div class="col s12">
 								<div class="card grey lighten-4" id="card-check-list">
 									<div class="card-content white-text" id="hidden">
@@ -180,7 +199,7 @@
 											<div class="col s1">
 												<label for="chk-demo2">
 
-													<input type="checkbox" class="filled-in" id="chk-demo2"/>
+													<input type="checkbox" class="filled-in" id="chk-demo2" />
 													<span></span>
 												</label>
 											</div>
@@ -194,7 +213,7 @@
 											<div class="col s1">
 												<label for="chk-demo3">
 
-													<input type="checkbox" class="filled-in" id="chk-demo3"/>
+													<input type="checkbox" class="filled-in" id="chk-demo3" />
 													<span></span>
 												</label>
 											</div>
@@ -208,7 +227,7 @@
 											<div class="col s1">
 												<label for="chk-demo3">
 
-													<input type="checkbox" class="filled-in" id="chk-demo3"/>
+													<input type="checkbox" class="filled-in" id="chk-demo3" />
 													<span></span>
 												</label>
 											</div>
@@ -222,193 +241,189 @@
 									</div>
 								</div>
 							</div>
-
-							<div class="col s12">
-								<br>
-								<table id="myTable" class="responsive-table">	
-									<thead>
-										<div class="col s6">
-											<br>
-											<br>
-											<br>
-											<h6 class="colored-blue"><b>Colaboradores</b></h6>
-										</div>
-
-										<div class="col s2">
-											<br>
-											<br>
-											<a class="waves-effect grey lighten-3 btn-small colored-orange" style="width: 100%;"><i class="material-icons left">add_circle_outline</i> Adicionar </a>
-										</div>
-										<br>
-										<div class="input-field col s4">
-											<i class="material-icons prefix">search</i>
-											<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar">
-										</div>
-
-									</thead>
-
-									<tbody>
-										
-										<tr>
-											<td>
-												<strong>
-													Paula Mayumi
-												</strong>
-												<br>
-												<span class="grey-text">
-													paula.konno@febracorp.org.br
-												</span>
-											</td>
-											<td>
-												<span>
-													Cargo:
-												</span>
-												<br>
-												<span>
-													Assistente
-												</span>
-											</td>
-											<td>
-												<span>
-													Empresa:
-												</span>
-												<br>
-												<span>
-													Live University
-												</span>
-											</td>
-											<td class="right">
-												<a class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
-												<a class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<strong>
-													Paula Mayumi
-												</strong>
-												<br>
-												<span class="grey-text">
-													paula.konno@febracorp.org.br
-												</span>
-											</td>
-											<td>
-												<span>
-													Cargo:
-												</span>
-												<br>
-												<span>
-													Assistente
-												</span>
-											</td>
-											<td>
-												<span>
-													Empresa:
-												</span>
-												<br>
-												<span>
-													Live University
-												</span>
-											</td>
-											<td class="right">
-												<a class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
-												<a class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<strong>
-													Paula Mayumi
-												</strong>
-												<br>
-												<span class="grey-text">
-													paula.konno@febracorp.org.br
-												</span>
-											</td>
-											<td>
-												<span>
-													Cargo:
-												</span>
-												<br>
-												<span>
-													Assistente
-												</span>
-											</td>
-											<td>
-												<span>
-													Empresa:
-												</span>
-												<br>
-												<span>
-													Live University
-												</span>
-											</td>
-											<td class="right">
-												<a class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
-												<a class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
-											</td>
-										</tr>
-
-										<tr>
-											<td>
-												<strong>
-													Paula Mayumi
-												</strong>
-												<br>
-												<span class="grey-text">
-													paula.konno@febracorp.org.br
-												</span>
-											</td>
-											<td>
-												<span>
-													Cargo:
-												</span>
-												<br>
-												<span>
-													Assistente
-												</span>
-											</td>
-											<td>
-												<span>
-													Empresa:
-												</span>
-												<br>
-												<span>
-													Live University
-												</span>
-											</td>
-											<td class="right">
-												<a class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
-												<a class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
-											</td>
-										</tr>
-
-									</tbody>
-								</table>
-
 							</div>
+							<div class="row">
+								<div class="col s6">
+									<h6 class="colored-blue"><b>Colaboradores</b></h6>
+								</div>
 
+								<div class="col s2">
+									<br>
+									<br>
+									<a class="waves-effect grey lighten-3 btn-small colored-orange"
+										style="width: 100%;"><i class="material-icons left">add_circle_outline</i>
+										Adicionar </a>
+								</div>
+								<br>
+								<div class="input-field col s4">
+									<i class="material-icons prefix">search</i>
+									<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar">
+								</div>
+							</div>
+							<table id="myTable" class="responsive-table">
+								<thead>
 
+								</thead>
+
+								<tbody>
+
+									<tr>
+										<td>
+											<strong>
+												Paula Mayumi
+											</strong>
+											<br>
+											<span class="grey-text">
+												paula.konno@febracorp.org.br
+											</span>
+										</td>
+										<td>
+											<span>
+												Cargo:
+											</span>
+											<br>
+											<span>
+												Assistente
+											</span>
+										</td>
+										<td>
+											<span>
+												Empresa:
+											</span>
+											<br>
+											<span>
+												Live University
+											</span>
+										</td>
+										<td class="right">
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<strong>
+												Paula Mayumi
+											</strong>
+											<br>
+											<span class="grey-text">
+												paula.konno@febracorp.org.br
+											</span>
+										</td>
+										<td>
+											<span>
+												Cargo:
+											</span>
+											<br>
+											<span>
+												Assistente
+											</span>
+										</td>
+										<td>
+											<span>
+												Empresa:
+											</span>
+											<br>
+											<span>
+												Live University
+											</span>
+										</td>
+										<td class="right">
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<strong>
+												Paula Mayumi
+											</strong>
+											<br>
+											<span class="grey-text">
+												paula.konno@febracorp.org.br
+											</span>
+										</td>
+										<td>
+											<span>
+												Cargo:
+											</span>
+											<br>
+											<span>
+												Assistente
+											</span>
+										</td>
+										<td>
+											<span>
+												Empresa:
+											</span>
+											<br>
+											<span>
+												Live University
+											</span>
+										</td>
+										<td class="right">
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<strong>
+												Paula Mayumi
+											</strong>
+											<br>
+											<span class="grey-text">
+												paula.konno@febracorp.org.br
+											</span>
+										</td>
+										<td>
+											<span>
+												Cargo:
+											</span>
+											<br>
+											<span>
+												Assistente
+											</span>
+										</td>
+										<td>
+											<span>
+												Empresa:
+											</span>
+											<br>
+											<span>
+												Live University
+											</span>
+										</td>
+										<td class="right">
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+											<a
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 
 					</div>
 				</div>
 			</div>
+	</main>
 
-		</main>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/index.js"></script>
 
+</body>
 
-
-
-
-
-
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="js/materialize.js"></script>
-		<script src="js/init.js"></script>
-		<script src="js/index.js"></script>
-
-	</body>
-	</html>
+</html>
