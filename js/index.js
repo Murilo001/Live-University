@@ -1,8 +1,23 @@
-//var instance = M.Collapsible.getInstance(document.querySelectorAll('#abrir-check'));
-//instance.open(0);
+/**
+ * Funções utilizadas na página index.
+ * - Manipulação de campos.
+ * - Manipulação do DOM.
+ * - Inicializações.
+ * - Bind de funções.
+ */
+
+
+/**
+ * Inicialização de métodos quando carrega a página.
+ * 
+ * - Inicializa o modal para inspecionar o colaborador.
+ * - Esconde os campos de checklist e cadastro de colaborador.
+ * - Esconde os campos de input do cadastro de colaborador.
+ * - Adiciona a função de click para o checklist.
+ * 
+ */
 $(document).ready(function () {
 	$('.modal').modal();
-	$('.modal').click();
 	$("#hidden").hide();
 	$("#tr-hidden").hide();
 	esconderCampos();
@@ -20,7 +35,13 @@ $(document).ready(function () {
 	});
 });
 
-function myFunction() {
+/**
+ * Função de pesquisa para a tabela de colaboradores.
+ * - Ao realizar qualquer interação com o campo de pesquisa 
+ * é realizado a busca na tabela, excluindo aqueles que não se
+ * comparam ao campo buscado.
+ */
+function pesquisar() {
 	// Declare variables 
 	var input, filter, table, tr, td, i, txtValue;
 	input = document.getElementById("txt-pesquisa");
@@ -42,39 +63,39 @@ function myFunction() {
 	}
 }
 
-// Remoção de elementos da tabela.
+/**
+ * Adiciona a função remover ao botão na tabela de colaboradores.
+ */
 $(".btn-remove").click(function () {
 	$(this).parent().parent().remove();
 });
 
+/**
+ * Adiciona a função adicionar ao botão na tabela de colaboradores.
+ */
 $(".btn-add").click(function () {
 	let trHtml = $(this).parent().parent().html();
 	trHtml.replace("</td>", "");
 	trHtml.trim();
 	let quebraEmColunas = trHtml.split("<td>");
-
-	let posicaoDeTratamento = quebraEmColunas[3].search("</td>");
-	let tratandoUltimoCampo = quebraEmColunas.slice(0, posicaoDeTratamento);
-	console.log(tratandoUltimoCampo);
-
 	const htmlTratado = quebraEmColunas[1] + "<br><br>" + quebraEmColunas[2];
-
-
-	
 	let instance = M.Modal.getInstance($('.modal'));
 	$("#modal-body").html(htmlTratado);
 	instance.open();
 	
 });
 
+/**
+ * FUNÇÕES DE ADICIONAR COLABORADOR
+ */
 
-// FUNÇÕES DE ADICIONAR COLABORADOR
-
-// Adiciona os campos preenchidos à tabela.
-// 		- Verifica se os campos foram preenchidos
-//	 	- Adiciona na tabela
-// 		- Limpa os registros
-// 		- Exibe pop-up de registro inserido
+/**
+ * Adiciona os campos preenchidos à tabela.
+ * - Verifica se os campos foram preenchidos
+ * - Adiciona na tabela
+ * - Limpa os registros
+ * - Exibe pop-up de registro inserido
+ */
 function adicaoTabela() {
 	if (validaCampos()) {
 		$("#tbody-colaboradores").prepend(montarRegisto());
@@ -82,7 +103,9 @@ function adicaoTabela() {
 	}
 }
 
-// Valida se todos os campos obrigatórios foram preenchidos.
+/**
+ * Valida se todos os campos obrigatórios foram preenchidos.
+ */
 function validaCampos() {
 	let validado = true;
 	if ($("#txt-nome").val() == "") {
@@ -104,7 +127,9 @@ function validaCampos() {
 	return validado;
 }
 
-// Estrutura o html do registro que será inserido na tabela.
+/**
+ * Estrutura o html do registro que será inserido na tabela.
+ */
 function montarRegisto() {
 	return htmlToInsert =
 		'<tr>' +
@@ -128,30 +153,37 @@ function montarRegisto() {
 		'<a class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed btn-remove">Remover</a>' +
 		'</td>' +
 		'</tr>';
-
 }
-
-// Cancela a adição de um novo colaborador.
-// 		- Limpa os campos de inserção
-//	 	- Esconde os campos de inserção
+	 	
+/**
+ * Cancela a adição de um novo colaborador.
+ * - Limpa os campos de inserção
+ * - Esconde os campos de inserção
+ */
 function cancelarAdicaoTabela() {
 	limparCampos();
 	esconderCampos();
 }
-
-// Processo de adicionar um novo colaborador à tabela.
-// 		- Mostra os campos de inserção
+		
+/**
+ * Processo de adicionar um novo colaborador à tabela.
+ * - Mostra os campos de inserção
+ */
 function mostrarCampos() {
 	$("#row-hidden-colaborador").show();
 }
-
-// Esconde os campos de input.
-// 		- Esconde os campos de inserção
+		
+/**
+ * Esconde os campos de input.
+ * - Esconde os campos de inserção
+ */
 function esconderCampos() {
 	$("#row-hidden-colaborador").hide();
 }
 
-// Limpa todos os inputs após realizar a adição ou cancelamento.
+/**
+ * Limpa todos os inputs após realizar a adição ou cancelamento.
+ */
 function limparCampos() {
 	$("#txt-nome").val("");
 	$("#txt-email").val("");
@@ -159,6 +191,5 @@ function limparCampos() {
 	$("#txt-empresa").val("");
 	$( ".text-campo-obrigatorio" ).each(function() {
 		$(this).html("");
-	});
-	
+	});	
 }
