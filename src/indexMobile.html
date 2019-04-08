@@ -15,7 +15,7 @@
 		body {
 			overflow-x: hidden;
 		}
-		
+
 		#icon-colaborador {
 			color: #CB9A38;
 		}
@@ -24,7 +24,7 @@
 			color: #CB9A38;
 		}
 
-		
+
 		.label-menu:hover {
 			border-left: 5px solid #54B4BB;
 		}
@@ -152,7 +152,15 @@
 				<div class="container-fluid">
 
 					<!-- User -->
-					<div class="row">
+					<div class="row valign-wrapper">
+						<div class="col m2 offset-m8 s5 offset-s2">
+							<span class="colored-blue" style="font-size: 20px;">Ricardo Barato</span>
+							<br>
+							<span class="grey-text">&ensp;&ensp;&ensp;&ensp;&ensp;Live University</span>
+						</div>
+						<div class="col m2 s5">
+							<img class="circle responsive-img" style="width: 40%; height: 60px" src="images/user.png">
+						</div>
 					</div>
 
 					<div class="row card white lighten-3" id="white-card">
@@ -177,96 +185,126 @@
 
 
 							<div class="row">
-							<div class="col s12">
-								<div class="card grey lighten-4" id="card-check-list">
-									<div class="card-content white-text" id="hidden">
+								<div class="col s12">
+									<div class="card grey lighten-4" id="card-check-list">
+										<div class="card-content white-text" id="hidden">
 
-										<div class="row black-text">
-											<div class="col s1">
-												<label for="chk-demo1">
+											<div class="row black-text">
+												<div class="col s1">
+													<label for="chk-demo1">
 
-													<input type="checkbox" class="filled-in" id="chk-demo1" />
-													<span></span>
-												</label>
+														<input type="checkbox" class="filled-in" id="chk-demo1" />
+														<span></span>
+													</label>
+												</div>
+												<div class="col s11">
+													<p>Instrução 1</p>
+													<p class="grey-text">Algumas informações sobre essa instrução</p>
+												</div>
 											</div>
-											<div class="col s11">
-												<p>Instrução 1</p>
-												<p class="grey-text">Algumas informações sobre essa instrução</p>
+
+											<div class="row black-text">
+												<div class="col s1">
+													<label for="chk-demo2">
+
+														<input type="checkbox" class="filled-in" id="chk-demo2" />
+														<span></span>
+													</label>
+												</div>
+												<div class="col s11">
+													<p>Instrução 2</p>
+													<p class="grey-text">Algumas informações sobre essa instrução</p>
+												</div>
+											</div>
+
+											<div class="row black-text">
+												<div class="col s1">
+													<label for="chk-demo3">
+
+														<input type="checkbox" class="filled-in" id="chk-demo3" />
+														<span></span>
+													</label>
+												</div>
+												<div class="col s11">
+													<p>Instrução 3</p>
+													<p class="grey-text">Algumas informações sobre essa instrução</p>
+												</div>
+											</div>
+
+											<div class="row black-text">
+												<div class="col s1">
+													<label for="chk-demo3">
+
+														<input type="checkbox" class="filled-in" id="chk-demo3" />
+														<span></span>
+													</label>
+												</div>
+												<div class="col s11">
+													<p>Instrução 3</p>
+													<p class="grey-text">Algumas informações sobre essa instrução</p>
+												</div>
 											</div>
 										</div>
-
-										<div class="row black-text">
-											<div class="col s1">
-												<label for="chk-demo2">
-
-													<input type="checkbox" class="filled-in" id="chk-demo2" />
-													<span></span>
-												</label>
-											</div>
-											<div class="col s11">
-												<p>Instrução 2</p>
-												<p class="grey-text">Algumas informações sobre essa instrução</p>
-											</div>
-										</div>
-
-										<div class="row black-text">
-											<div class="col s1">
-												<label for="chk-demo3">
-
-													<input type="checkbox" class="filled-in" id="chk-demo3" />
-													<span></span>
-												</label>
-											</div>
-											<div class="col s11">
-												<p>Instrução 3</p>
-												<p class="grey-text">Algumas informações sobre essa instrução</p>
-											</div>
-										</div>
-
-										<div class="row black-text">
-											<div class="col s1">
-												<label for="chk-demo3">
-
-													<input type="checkbox" class="filled-in" id="chk-demo3" />
-													<span></span>
-												</label>
-											</div>
-											<div class="col s11">
-												<p>Instrução 3</p>
-												<p class="grey-text">Algumas informações sobre essa instrução</p>
-											</div>
-										</div>
-
-
 									</div>
 								</div>
 							</div>
-							</div>
+
 							<div class="row">
-								<div class="col s6">
+								<div class="col s7">
 									<h6 class="colored-blue"><b>Colaboradores</b></h6>
 								</div>
-
 								<div class="col s2">
-									<br>
-									<br>
 									<a class="waves-effect grey lighten-3 btn-small colored-orange"
 										style="width: 100%;"><i class="material-icons left">add_circle_outline</i>
 										Adicionar </a>
 								</div>
-								<br>
-								<div class="input-field col s4">
-									<i class="material-icons prefix">search</i>
-									<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar">
+								<div class="col s3">
+									<input type="text" id="txt-pesquisa" onkeyup="myFunction()" placeholder="Pesquisar">
 								</div>
 							</div>
+
+							<div class="row" id="row-hidden-colaborado">
+								<div class="col s4">
+									<label>Nome</label>
+									<span>
+										<input type="text" name="nome" id="txt-nome">
+									</span>
+								</div>
+
+								<div class="col s2">
+									<label>Email</label>
+									<span>
+										<input type="text" name="email" id="txt-email">
+									</span>
+								</div>
+								<div class="col s2">
+									<label>Cargo</label>
+									<span>
+										<input type="text" name="cargo" id="txt-cargo">
+									</span>
+								</div>
+								<div class="col s2">
+									<label>Empresa</label>
+									<span>
+										<input type="text" name="empresa" id="txt-empresa">
+									</span>
+								</div>
+								<div class="col s2">
+									<a class="waves-effect grey lighten-3 btn-small colored-orange"><i
+											class="material-icons">add_circle_outline</i>
+									</a>
+									<a class="waves-effect grey lighten-3 btn-small colored-orange"><i
+											class="material-icons">cancel</i>
+									</a>
+								</div>
+							</div>
+
 							<table id="myTable" class="responsive-table">
 								<thead>
 
 								</thead>
 
 								<tbody>
-
 									<tr>
 										<td>
 											<strong>
@@ -283,7 +321,7 @@
 											</span>
 											<br>
 											<span>
-												Assistente
+												Auxiliar
 											</span>
 										</td>
 										<td>
@@ -306,7 +344,7 @@
 									<tr>
 										<td>
 											<strong>
-												Paula Mayumi
+												Frederico Calisto
 											</strong>
 											<br>
 											<span class="grey-text">
@@ -319,7 +357,7 @@
 											</span>
 											<br>
 											<span>
-												Assistente
+												Diretor Executivo
 											</span>
 										</td>
 										<td>
@@ -342,7 +380,7 @@
 									<tr>
 										<td>
 											<strong>
-												Paula Mayumi
+												Roderval Matias
 											</strong>
 											<br>
 											<span class="grey-text">
@@ -355,7 +393,7 @@
 											</span>
 											<br>
 											<span>
-												Assistente
+												Supervisor
 											</span>
 										</td>
 										<td>
@@ -378,7 +416,7 @@
 									<tr>
 										<td>
 											<strong>
-												Paula Mayumi
+												Kaleb Ariano
 											</strong>
 											<br>
 											<span class="grey-text">
@@ -391,7 +429,7 @@
 											</span>
 											<br>
 											<span>
-												Assistente
+												Professor Substituto
 											</span>
 										</td>
 										<td>

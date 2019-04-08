@@ -2,7 +2,7 @@
 //instance.open(0);
 $(document).ready(function () {
 	$("#hidden").hide();
-
+	$("#tr-hidden").hide();
 
 	$('#btn-check-list').click(function () {
 		var clicks = $(this).data('clicks');
@@ -15,26 +15,12 @@ $(document).ready(function () {
 		}
 		$(this).data("clicks", !clicks);
 	});
-
-
-
 });
-
-function trocaCorIcon() {
-	/** 
-	$("#label-curso").mouseover(function () {
-		//$("#icon-curso").attr("class", "colored-blue");
-		//$("#icon-curso").css("color", "red");
-		alert("grab thing");
-	});
-	*/
-}
-
 
 function myFunction() {
 	// Declare variables 
 	var input, filter, table, tr, td, i, txtValue;
-	input = document.getElementById("myInput");
+	input = document.getElementById("txt-input");
 	filter = input.value.toUpperCase();
 	table = document.getElementById("myTable");
 	tr = table.getElementsByTagName("tr");
@@ -53,3 +39,43 @@ function myFunction() {
 	}
 }
 
+// FUNÇÕES DE ADICIONAR COLABORADOR
+
+// Adiciona os campos preenchidos à tabela
+// 		- Verifica se os campos foram preenchidos
+//	 	- Adiciona na tabela
+// 		- Limpa os registros
+// 		- Exibe pop-up de registro inserido
+function adicaoTabela() {
+	let htmlToInsert = "<td>" +	"<td>";
+	$("#").val(htmlToInsert);
+	$("#");A
+}
+
+// Cancela a adição de um novo colaborador
+// 		- Limpa os campos de inserção
+//	 	- Esconde os campos de inserção
+function cancelarAdicaoTabela() {
+	limparCampos();
+	esconderCampos();
+}
+
+// Processo de adicionar um novo colaborador à tabela 
+// 		- Mostra os campos de inserção
+function mostrarCampos() {
+	$("#row-hidden-colaborado").show();
+}
+
+// Esconde os campos de input
+// 		- Esconde os campos de inserção
+function esconderCampos() {
+	$("#row-hidden-colaborado").hide();
+}
+
+// Limpa todos os inputs após realizar a adição ou cancelamento
+function limparCampos() {
+	$("#txt-nome").val("");
+	$("#txt-email").val("");
+	$("#txt-cargo").val("");
+	$("#txt-empresa").val("");
+}
