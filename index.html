@@ -69,6 +69,11 @@
 
 		}
 
+		.text-campo-obrigatorio {
+			color: red;
+			font-size: 12px;
+		}
+
 		.btn-width-fixed {
 			width: 100px;
 		}
@@ -255,7 +260,7 @@
 								</div>
 								<div class="col s2">
 									<a class="waves-effect grey lighten-3 btn-small colored-orange"
-										style="width: 100%;"><i class="material-icons left">add_circle_outline</i>
+										style="width: 100%;" onclick="mostrarCampos()"><i class="material-icons left">add_circle_outline</i>
 										Adicionar </a>
 								</div>
 								<div class="col s3">
@@ -263,37 +268,41 @@
 								</div>
 							</div>
 
-							<div class="row" id="row-hidden-colaborado">
-								<div class="col s4">
-									<label>Nome</label>
+							<div class="row" id="row-hidden-colaborador">
+								<div class="col s3 m4">
+									<label><strong class="red-text">*</strong> Nome</label>
 									<span>
 										<input type="text" name="nome" id="txt-nome">
+										<span class="helper-text-nome text-campo-obrigatorio" data-error="wrong" data-success="right"></span>
 									</span>
 								</div>
 
-								<div class="col s2">
-									<label>Email</label>
+								<div class="col s2 m2">
+									<label><strong class="red-text">*</strong> Email</label>
 									<span>
 										<input type="text" name="email" id="txt-email">
+										<span class="helper-text-email text-campo-obrigatorio" data-error="wrong" data-success="right"></span>
 									</span>
 								</div>
-								<div class="col s2">
-									<label>Cargo</label>
+								<div class="col s2 m2">
+									<label><strong class="red-text">*</strong> Cargo</label>
 									<span>
 										<input type="text" name="cargo" id="txt-cargo">
+										<span class="helper-text-cargo text-campo-obrigatorio" data-error="wrong" data-success="right"></span>
 									</span>
 								</div>
-								<div class="col s2">
-									<label>Empresa</label>
+								<div class="col s3 m2">
+									<label><strong class="red-text">*</strong> Empresa</label>
 									<span>
 										<input type="text" name="empresa" id="txt-empresa">
+										<span class="helper-text-empresa text-campo-obrigatorio" data-error="wrong" data-success="right"></span>
 									</span>
 								</div>
-								<div class="col s2">
-									<a class="waves-effect grey lighten-3 btn-small colored-orange"><i
+								<div class="col s2 m2">
+									<a class="waves-effect grey lighten-3 btn-small colored-orange" onclick="adicaoTabela()" ><i
 											class="material-icons">add_circle_outline</i>
 									</a>
-									<a class="waves-effect grey lighten-3 btn-small colored-orange"><i
+									<a class="waves-effect grey lighten-3 btn-small colored-orange" onclick="cancelarAdicaoTabela()"><i
 											class="material-icons">cancel</i>
 									</a>
 								</div>
@@ -304,7 +313,7 @@
 
 								</thead>
 
-								<tbody>
+								<tbody id="tbody-colaboradores">
 									<tr>
 										<td>
 											<strong>
@@ -335,9 +344,9 @@
 										</td>
 										<td class="right">
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed btn-add">Abrir</a>
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed btn-remove">Remover</a>
 										</td>
 									</tr>
 
@@ -371,9 +380,9 @@
 										</td>
 										<td class="right">
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed btn-add">Abrir</a>
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed btn-remove">Remover</a>
 										</td>
 									</tr>
 
@@ -407,9 +416,9 @@
 										</td>
 										<td class="right">
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed btn-add">Abrir</a>
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed btn-remove">Remover</a>
 										</td>
 									</tr>
 
@@ -443,13 +452,22 @@
 										</td>
 										<td class="right">
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed">Abrir</a>
+												class="waves-effect grey lighten-3 btn-small colored-blue btn-width-fixed btn-add">Abrir</a>
 											<a
-												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed">Remover</a>
+												class="waves-effect grey lighten-3 btn-small colored-orange btn-width-fixed btn-remove">Remover</a>
 										</td>
 									</tr>
 								</tbody>
 							</table>
+							<div id="modal1" class="modal">
+									<div class="modal-content">
+									  <h4 id="modal-header">Dados do Colaborador:</h4>
+									  <p id="modal-body"></p>
+									</div>
+									<div class="modal-footer">
+									  <a href="#!" class="modal-close waves-effect grey lighten-3 colored-orange btn-small">Ok!</a>
+									</div>
+								  </div>
 						</div>
 
 					</div>
