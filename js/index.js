@@ -66,14 +66,14 @@ function pesquisar() {
 /**
  * Adiciona a função remover ao botão na tabela de colaboradores.
  */
-$(".btn-remove").click(function () {
+$(".btn-remove").click( () => {
 	$(this).parent().parent().remove();
 });
 
 /**
  * Adiciona a função adicionar ao botão na tabela de colaboradores.
  */
-$(".btn-add").click(function () {
+$(".btn-add").click( () => {
 	let trHtml = $(this).parent().parent().html();
 	trHtml.replace("</td>", "");
 	trHtml.trim();
